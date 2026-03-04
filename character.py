@@ -12,6 +12,9 @@ class Character:
     can_see: set[str]
 
 def get_default_characters() -> dict[Character]:
+    """
+    Returns a dictionary incorproating the 6 main characters from Hampton at the Cross-Roads
+    """
     characters: dict[Character] = {}
 
     characters['mayor'] = Character("mayor", "Sam Wallace", {'contracts','repairs','employees','mayor_reelection','rep_reelection','ceo_stock','substack_subs','union_rate','admiral_passage', 'mayor_funds', 'ceo_funds'})

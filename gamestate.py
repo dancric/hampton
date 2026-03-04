@@ -77,6 +77,9 @@ def processScene1(state: GameState, decisions: SceneDecisions) -> GameState:
     new_state.union_rate += 0.2* decisions.scene_decision['Blame']['GBI'] / blame_sum
     new_state.admiral_likability = state.admiral_likability + 10 * decisions.scene_decision['Blame']['Self Blame'] / blame_sum - 20 * decisions.scene_decision['Blame']['Navy'] / blame_sum - 10 * decisions.scene_decision['Blame']['Act of God'] / blame_sum + 5 * (1-blame_sum)
 
+    #Handle Recurring Decisions
+    new_state
+
     return new_state
 
 
