@@ -1,0 +1,8 @@
+## The Economics of GBI’s Stock Price
+One critical aspect of this scenario is the economic health of Griffith Barrett Industries (GBI), the shipbuilder of the nation’s carrier fleet and the owner of the shipyard in Hampton Roads. GBI’s stock price fluctuates widely given its anticipated revenues from defense contracts and its efficiency in building ships.
+
+GBI’s stock is generally priced at $5 for every billion dollars of future profits from defense contracts, adjusted for their probability of passage. For instance, if a contract has a future profit of $1 billion and the probability of passage is 50%, then the company’s stock would be valued at $2.50 ($500 million future expected profit).
+
+In addition to the expected value of future profits, another $10 of GBI’s stock price is determined by its spending of corporate resources, which start at $100 million. So in our example above, assuming the company hadn’t spent any corporate resources, then GBI’s final stock price would be $12.50.
+
+The margin on a single carrier contract is $5 billion minus the cost of labor. Pentagon planners generally expect about 10,000 workers per carrier, although less workers or more workers can be used by GBI to increase profits or to show its commitment to the project. A non-union laborer costs $100,000 and a union laborer costs $300,000 given salary increases, health benefits, vacation days requiring worker substitutes, and more. Therefore, a standard carrier with 10,000 non-unionized workers makes a profit of $4 billion, and the same carrier with 10,000 unionized workers makes a profit of $2 billion.
