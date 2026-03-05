@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+src/hampton/__init__.py
+src/hampton/__main__.py
+src/hampton/agent.py
+src/hampton/api.py
+src/hampton/character.py
+src/hampton/gamestate.py
+src/hampton/simulation.py
+src/hampton.egg-info/PKG-INFO
+src/hampton.egg-info/SOURCES.txt
+src/hampton.egg-info/dependency_links.txt
+src/hampton.egg-info/requires.txt
+src/hampton.egg-info/top_level.txt
