@@ -4,8 +4,6 @@ Character class to represent different characters in the game
 
 from dataclasses import dataclass
 
-characters = ["mayor", "rep", "ceo", "substacker", "union", "admiral"]
-
 @dataclass
 class Character:
     title: str

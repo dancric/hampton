@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parents[2]
 
 def run_simulation():
     states = []
-    states.add[GameState()]
+    states.append(GameState())
 
     agents: AgentList = createStandardAgents()
     applySavedContext(agents, "story")
@@ -28,8 +28,10 @@ def createStandardAgents() -> list:
     characters = getDefaultCharacters()
     agents = []
 
-    for char in characters:
-        agents.add(Agent(character=char))
+    for key in characters:
+        agents.append(Agent(character=characters[key]))
+
+    return agents
 
 def applySavedContext(agents: AgentList, name: str):
     with open(ROOT / "rules" / f"{name}.md") as f:
@@ -40,7 +42,7 @@ def applySavedContext(agents: AgentList, name: str):
 
 def applyCharacterContext(agents: AgentList):
     for agent in agents:
-        with open(ROOT / "rules" / "characters" / f"{agent.character.name}.md") as f:
+        with open(ROOT / "rules" / "characters" / f"{agent.character.title}.md") as f:
             context = f.read()
         agent.addContext(context)
 

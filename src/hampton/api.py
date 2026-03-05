@@ -11,7 +11,7 @@ from character import characters
 ROOT = Path(__file__).resolve().parents[2]
 
 def makeCharacterChoiceModel(agent: Agent):
-    TargetType = Literal[tuple(characters - agent.character.targets)]
+    TargetType = Literal[tuple(agent.character.target)]
     
 
 class CharacterChoice(BaseModel):
