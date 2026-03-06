@@ -8,3 +8,11 @@ dependencies = [
     "pydantic",
     "tiktoken"
 ]
+
+[project.optional-dependencies]
+dev = [
+    "ipython",
+    "pytest",
+    "ipdb",
+    "ruff",
+]

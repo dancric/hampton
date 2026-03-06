@@ -1,3 +1,9 @@
 openai
 pydantic
 tiktoken
+
+[dev]
+ipython
+pytest
+ipdb
+ruff

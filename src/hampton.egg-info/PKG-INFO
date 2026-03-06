@@ -6,3 +6,8 @@ Requires-Python: >=3.10
 Requires-Dist: openai
 Requires-Dist: pydantic
 Requires-Dist: tiktoken
+Provides-Extra: dev
+Requires-Dist: ipython; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: ipdb; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
