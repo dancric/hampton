@@ -1,6 +1,6 @@
 from dataclasses import dataclass, fields, field
 from typing import TypeAlias
-from character import Character
+from .character import Character
 
 StringList: TypeAlias = list[str]
 

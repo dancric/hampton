@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from simulation import run_simulation
+from .simulation import run_simulation
 
 def main():
     run_simulation()

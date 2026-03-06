@@ -1,22 +1,22 @@
 from pathlib import Path
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
-from character import getDefaultCharacters
-from gamestate import GameState
-from agent import Agent, AgentList
-from api import getResponse
+from .character import getDefaultCharacters
+from .gamestate import GameState
+from .agent import Agent, AgentList
+from .api import getResponse
 
 ROOT = Path(__file__).resolve().parents[2]
 
 @dataclass
 class Simulator():
-    states: list = list()
-    agents: AgentList
+    agents: AgentList = None
+    states: list = field(default_factory=list)
 
     def setup_simulation(self):
         self.states.append(GameState())
-
         self.agents = createStandardAgents()
+
         self.applySavedContext("story")
         self.applySavedContext("characters")
         self.applySavedContext("stock_price")
@@ -49,7 +49,7 @@ class Simulator():
 
 def createStandardAgents() -> AgentList:
     characters = getDefaultCharacters()
-    agents: AgentList = list(Agent)
+    agents: AgentList = []
 
     for key in characters:
         agents.append(Agent(character=characters[key]))

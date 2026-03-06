@@ -6,7 +6,7 @@ A dataclass for storing all data related to the game from scene to scene
 import copy
 from dataclasses import dataclass, asdict, fields, field
 
-from character import Character
+from .character import Character
 
 @dataclass
 class GameState:

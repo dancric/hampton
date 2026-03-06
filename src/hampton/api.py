@@ -4,9 +4,7 @@ from openai import OpenAI
 import tiktoken
 from pydantic import BaseModel, Field
 from typing import Literal
-from agent import Agent
-
-from character import characters
+from .agent import Agent
 
 ROOT = Path(__file__).resolve().parents[2]
 
