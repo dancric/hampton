@@ -95,7 +95,7 @@ def processScene1(current_state: GameState, decisions: SceneDecisions) -> GameSt
     next_state.mayor_likability -= 20 * decisions.scene_decisions['Blame']['Local Government'] / blame_sum
     next_state.rep_likability -= 20 * decisions.scene_decisions['Blame']['Congress'] / blame_sum
     next_state.union_rate += 0.2* decisions.scene_decisions['Blame']['GBI'] / blame_sum
-    next_state.admiral_likability =  next_state.admiral_likability + 10 * decisions.scene_decisions['Blame']['Self Blame'] / blame_sum - 20 * decisions.scene_decisions['Blame']['Navy'] / blame_sum - 10 * decisions.scene_decisions['Blame']['Act of God'] / blame_sum + 5 * (1-blame_sum)
+    next_state.admiral_likability =  next_state.admiral_likability + 10 * decisions.scene_decisions['Blame']['Self'] / blame_sum - 20 * decisions.scene_decisions['Blame']['Navy'] / blame_sum - 10 * decisions.scene_decisions['Blame']['Act of God'] / blame_sum + 5 * (1-blame_sum)
 
     #Handle Recurring Decisions
 
@@ -237,3 +237,4 @@ def replenishFunds(state: GameState):
     state.mayor_funds += 500000
     state.rep_funds += 2500000
     state.union_funds += 200 * state.employees * state.union_rate
+
