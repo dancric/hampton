@@ -2,6 +2,8 @@ import random
 from pathlib import Path
 from dataclasses import dataclass, field
 
+import dill
+
 from .character import getDefaultCharacters
 from .gamestate import GameState, SceneDecisions, SpendingDecision, SpendingDecisions, processScene1
 from .agent import Agent, AgentList
@@ -10,6 +12,20 @@ from .player_decisions import get_scene_1_decisions
 
 ROOT = Path(__file__).resolve().parents[2]
 WORD_BUDGET: int = 2250
+
+
+def save_actions(actions: list[AgentAction], filepath: str | Path) -> None:
+    """Serialize a list of AgentAction to a file using dill."""
+    data = [a.model_dump() for a in actions]
+    with open(filepath, "wb") as f:
+        dill.dump(data, f)
+
+
+def load_actions(filepath: str | Path) -> list[AgentAction]:
+    """Deserialize a list of AgentAction from a dill file."""
+    with open(filepath, "rb") as f:
+        data = dill.load(f)
+    return [AgentAction.model_validate(d) for d in data]
 
 @dataclass
 class Simulator():
