@@ -6,7 +6,8 @@ requires-python = ">=3.10"
 dependencies = [
     "openai",
     "pydantic",
-    "tiktoken"
+    "tiktoken",
+    "dill"
 ]
 
 [project.optional-dependencies]
