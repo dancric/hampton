@@ -43,7 +43,7 @@ class API():
 
     def get_response(self, query: str):
         response = self.client.responses.create(
-            model="gpt-5.2",
+            model="gpt-5.4",
             input=query
         )
         return response.output_text
@@ -61,7 +61,7 @@ class API():
         constrained_model = make_action_model(agent)
 
         response = self.client.responses.parse(
-            model="gpt-5-mini",
+            model="gpt-5.4",
             input=[
             {
                 "role": "system",

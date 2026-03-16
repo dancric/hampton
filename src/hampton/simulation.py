@@ -126,7 +126,7 @@ class Simulator():
         Returns a dict mapping character title to their parsed decision.
         """
         decision_models = get_scene_1_decisions(self.states[-1])
-        results: dict = {}
+        decisions: dict = {}
 
         agent_lookup: dict[str, Agent] = {
             agent.character.title: agent for agent in self.agents
@@ -137,13 +137,13 @@ class Simulator():
             context = agent.agg_context()
 
             response = api.client.responses.parse(
-                model="gpt-5-mini",
+                model="gpt-5.4",
                 input=[
                     {
                         "role": "system",
                         "content": (
-                            "You are playing a character in a policy simulation. "
-                            "Based on the conversations you have had, fill out your decision sheet. "
+                            "You are playing a character in a policy simulation."
+                            "Based on the conversations you have had, fill out your decision sheet."
                             "Think carefully about how your decisions will maximize your score."
                         ),
                     },
@@ -160,10 +160,10 @@ class Simulator():
                 text_format=model_class,
             )
 
-            results[title] = response.output_parsed
+            decisions[title] = response.output_parsed
             print(f"Decision received from {title}")
 
-        return results
+        return decisions
     
     def process_scene_1_decisions(self, decisions):
         scene_decisions = {}

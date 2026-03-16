@@ -7,6 +7,7 @@ src/hampton/api.py
 src/hampton/character.py
 src/hampton/display.py
 src/hampton/gamestate.py
+src/hampton/player_decisions.py
 src/hampton/simulation.py
 src/hampton.egg-info/PKG-INFO
 src/hampton.egg-info/SOURCES.txt
